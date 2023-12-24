@@ -5,7 +5,8 @@ spring:
       active: dev
     cloud:
         config: 
-            uri: http://configserver:8071
+#            uri: http://configserver:8071
+            uri: http://localhost:8071
 
 logging:
   level:
@@ -88,3 +89,4 @@ resilience4j.thread-pool-bulkhead:
       maxThreadPoolSize: 1
       coreThreadPoolSize: 1
       queueCapacity: 1
+      keepAliveDuration: 20ms
